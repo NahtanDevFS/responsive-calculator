@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-slate-300">
+    <div
+      class="flex w-full h-screen items-start mt-8 justify-center sm:items-center sm:mt-0"
+    >
+      <div
+        class="bg-slate-500 max-w-sm rounded-lg p-8 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] ml-5 mr-5 sm:p-12 sm:max-w-3xl"
+      >
+        <form>
+          <div>
+            <input
+              type="text"
+              name="display"
+              id="calc_display"
+              readonly
+              class="w-full h-[4rem] shadow-2xl bg-sky-300 text-right text-4xl"
+            />
+          </div>
+          <div class="mt-10 flex justify-between sm:mt-12">
+            <input
+              type="button"
+              value="AC"
+              onclick="display.value = ''"
+              class="bg-slate-800 rounded-lg mr-2 w-16 h-16 text-slate-300 shadow-2xl text-2xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="DE"
+              onclick="display.value = display.value.toString().slice(0,-1)"
+              class="bg-slate-800 rounded-lg mr-2 w-16 h-16 text-slate-300 shadow-2xl text-2xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="%"
+              onclick="display.value += '%'"
+              class="bg-slate-800 rounded-lg mr-2 w-16 h-16 text-slate-300 shadow-2xl text-2xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="/"
+              onclick="display.value += '/'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-2xl cursor-pointer sm:w-24 sm:h-24 sm:text-3xl"
+            />
+          </div>
+          <div class="mt-6 flex justify-between sm:mt-8">
+            <input
+              type="button"
+              value="7"
+              onclick="display.value += '7'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="8"
+              onclick="display.value += '8'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="9"
+              onclick="display.value += '9'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="*"
+              onclick="display.value += '*'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:text-3xl"
+            />
+          </div>
+          <div class="mt-6 flex justify-between sm:mt-8">
+            <input
+              type="button"
+              value="4"
+              onclick="display.value += '4'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="5"
+              onclick="display.value += '5'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="6"
+              onclick="display.value += '6'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="-"
+              onclick="display.value += '-'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-5xl cursor-pointer sm:w-24 sm:h-24 sm:text-3xl"
+            />
+          </div>
+          <div class="mt-6 flex justify-between sm:mt-8">
+            <input
+              type="button"
+              value="1"
+              onclick="display.value += '1'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="2"
+              onclick="display.value += '2'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="3"
+              onclick="display.value += '3'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="+"
+              onclick="display.value += '+'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:text-3xl"
+            />
+          </div>
+          <div class="mt-6 flex justify-between sm:mt-8">
+            <input
+              type="button"
+              value="0"
+              onclick="display.value += '0'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-3xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="."
+              onclick="display.value += '.'"
+              class="bg-slate-800 rounded-lg w-16 h-16 text-slate-300 shadow-2xl text-5xl cursor-pointer sm:w-24 sm:h-24 sm:mr-8 sm:text-3xl"
+            />
+            <input
+              type="button"
+              value="="
+              onclick="calculate();display.value = eval(display.value)"
+              class="bg-slate-800 rounded-lg w-[8.75rem] h-16 text-slate-300 shadow-2xl text-4xl cursor-pointer sm:w-[13.75rem] sm:h-24 sm:text-5xl"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function calculate() {
+        var str = document.getElementById("calc_display").value;
+        var num1;
+        var num2;
+        while (str.includes("%")) {
+          //check if the string contains numbers
+          if (/\d/.test(str) == true) {
+            num1 = str.substr(0, str.indexOf("%"));
+            num2 = str.slice(str.indexOf("%") + 1);
+            console.log(num2);
+          }
+          if (num1 != "" && num2 != "") {
+            str = str.replace("%", "*");
+            str += "*0.01";
+          }
+          if (str.includes("**")) {
+            str = "Syntax Error";
+            document.getElementById("calc_display").value = str;
+          } else {
+            document.getElementById("calc_display").value = str;
+            console.log(str);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
